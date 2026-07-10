@@ -1,10 +1,12 @@
 # Echo Carrie
 
-The source for [echoscarrie.com](https://echoscarrie.com): a website that
-listens first.
+The source for [echoscarrie.com](https://echoscarrie.com): a private listening
+surface that notices what a visitor writes and answers from a different angle.
 
-Visitors leave a thought and receive one of three short forms of response:
-a mirror, a turn, or a door into one of Carrie's four creative frequencies.
+Visitors choose one of three forms of response — a mirror, a turn, or a door —
+and can continue the exchange, enter four expandable rooms, revisit earlier
+echoes, or clear the site's memory. Language analysis and history stay in the
+visitor's browser; the site does not upload their words.
 
 ## Local development
 

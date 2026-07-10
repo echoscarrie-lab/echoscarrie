@@ -3,20 +3,20 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://echoscarrie.com"),
-  title: "Echo Carrie — A website that listens first",
+  title: "Echo Carrie — Say something real. This place answers.",
   description:
-    "Leave a thought. Carrie's world will answer with a mirror, a turn, or a door.",
+    "A private, interactive listening surface. Leave one honest sentence and receive a mirror, a turn, or a door into Carrie's world.",
   openGraph: {
-    title: "Echo Carrie",
-    description: "Leave a thought. See what echoes back.",
+    title: "Echo Carrie — This place answers",
+    description: "Say something real. See what echoes back.",
     type: "website",
     siteName: "Echo Carrie",
-    images: [{ url: "/og.png", width: 1536, height: 1024, alt: "Echo Carrie — Leave a thought. See what echoes back." }],
+    images: [{ url: "/og.png", width: 1536, height: 1024, alt: "Echo Carrie — Say something real. This place answers." }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Echo Carrie",
-    description: "Leave a thought. See what echoes back.",
+    description: "Say something real. See what echoes back.",
     images: ["/og.png"],
   },
 };
