@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://echoscarrie.com"),
   title: "Echo Carrie — Say something real. This place answers.",
   description:
-    "A private, interactive listening surface. Leave one honest sentence and receive a mirror, a turn, or a door into Carrie's world.",
+    "Carrie's interactive home for human × AI, tiny worlds, dark stories, and unfinished ideas. Leave one honest sentence and see what echoes back.",
   openGraph: {
     title: "Echo Carrie — This place answers",
     description: "Say something real. See what echoes back.",

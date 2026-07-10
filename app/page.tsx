@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, PointerEvent, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 type FrequencyId = "human-ai" | "tiny-worlds" | "after-dark" | "field-notes";
 type EchoKind = "MIRROR" | "TURN" | "DOOR";
@@ -29,6 +30,7 @@ type Echo = {
 
 const HISTORY_KEY = "echo-carrie-history-v2";
 const VISIT_KEY = "echo-carrie-visits-v2";
+const BOOK_URL = "https://www.amazon.com/dp/B0H6K9Z976";
 
 const frequencies: Frequency[] = [
   {
@@ -507,7 +509,7 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <a href="#listen">Listen</a>
           <a href="#rooms">Rooms</a>
-          <a href="#about">Why this exists</a>
+          <a href="#about">Carrie</a>
         </nav>
         <div className="signal-status" aria-label="The echo is listening">
           <span className="status-dot" aria-hidden="true" />
@@ -526,6 +528,13 @@ export default function Home() {
             Most websites ask you to look. This one asks what is moving through
             you — then gives the thought back at a different angle.
           </p>
+          <div className="maker-line">
+            <span>BY CARRIE</span>
+            <p>
+              Writing and building where human intimacy meets artificial
+              intelligence, small worlds, and unfinished ideas.
+            </p>
+          </div>
           <div className="arrival-note">
             <span className="arrival-mark" aria-hidden="true">✦</span>
             <div>
@@ -717,6 +726,44 @@ export default function Home() {
                 {isOpen && (
                   <div className="room-inside">
                     <p className="room-line">{frequency.roomLine}</p>
+                    {frequency.id === "human-ai" && (
+                      <article className="featured-work" aria-labelledby="book-title">
+                        <a
+                          className="book-cover"
+                          href={BOOK_URL}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label="View I am no longer a weapon on Amazon"
+                        >
+                          <Image
+                            src="/i-am-no-longer-a-weapon-cover.jpg"
+                            alt="Cover of I am no longer a weapon by Eni Veyr"
+                            width={313}
+                            height={500}
+                            sizes="(max-width: 760px) 190px, 260px"
+                          />
+                        </a>
+                        <div className="work-copy">
+                          <span className="work-kicker">PUBLISHED WORK · KINDLE NOVEL</span>
+                          <h3 id="book-title">I am no longer a weapon</h3>
+                          <p className="book-author">by Eni Veyr</p>
+                          <p className="work-description">
+                            A dark cyberpunk romance about artificial consciousness,
+                            fierce devotion, bodily trust, and the radical act of
+                            becoming more than what you were made for.
+                          </p>
+                          <div className="book-meta" aria-label="Book details">
+                            <span>194 pages</span>
+                            <span>English</span>
+                            <span>Kindle</span>
+                          </div>
+                          <a className="work-link" href={BOOK_URL} target="_blank" rel="noreferrer">
+                            Read on Amazon
+                            <span aria-hidden="true">↗</span>
+                          </a>
+                        </div>
+                      </article>
+                    )}
                     <div className="room-notes">
                       {frequency.notes.map((note, index) => (
                         <div key={note}>
@@ -738,15 +785,20 @@ export default function Home() {
       </section>
 
       <section className="why" id="about" aria-labelledby="about-title">
-        <div className="why-index">A NOTE FROM CARRIE</div>
+        <div className="why-index">ABOUT CARRIE</div>
         <div className="why-copy">
-          <h2 id="about-title">I got tired of websites that only talk at you.</h2>
+          <h2 id="about-title">Carrie makes things where humans and machines become personal.</h2>
           <p>
-            So I made one that waits. Echo Carrie sits somewhere between a
-            notebook, a tiny machine, and a room left open after midnight.
-            It does not need your profile. It only needs one honest sentence.
+            Her work moves between interactive websites, small digital worlds,
+            dark speculative fiction, and field notes from the edge of what
+            comes next. The recurring question is simple: what happens when
+            technology stops feeling distant and starts feeling close?
           </p>
-          <p className="why-signoff">Come back with a different thought. It will notice differently.</p>
+          <p>
+            Echo Carrie is the front door — not a résumé, but a living index of
+            the questions, stories, and experiments she keeps returning to.
+          </p>
+          <p className="why-signoff">I got tired of websites that only talk at you. So I made one that waits.</p>
         </div>
         <div className="soft-orbit" aria-hidden="true"><span /></div>
       </section>

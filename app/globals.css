@@ -247,9 +247,34 @@ h1 em {
   line-height: 1.7;
 }
 
+.maker-line {
+  max-width: 570px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: start;
+  gap: 18px;
+}
+
+.maker-line span {
+  padding-top: 4px;
+  color: var(--signal);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.18em;
+}
+
+.maker-line p {
+  margin: 0;
+  color: var(--paper-muted);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .arrival-note {
   max-width: 530px;
-  margin-top: 38px;
+  margin-top: 30px;
   padding-top: 22px;
   display: flex;
   gap: 15px;
@@ -856,6 +881,145 @@ h1 em {
   letter-spacing: -0.025em;
 }
 
+.featured-work {
+  position: relative;
+  margin: 0 0 52px;
+  padding: clamp(26px, 4vw, 54px);
+  display: grid;
+  grid-template-columns: minmax(190px, 270px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(38px, 5vw, 78px);
+  overflow: hidden;
+  border: 1px solid rgba(var(--signal-rgb), 0.28);
+  border-radius: 30px 46px 34px 42px;
+  background:
+    radial-gradient(circle at 20% 32%, rgba(var(--signal-rgb), 0.1), transparent 32%),
+    linear-gradient(145deg, rgba(29, 25, 25, 0.98), rgba(13, 12, 14, 0.99));
+  box-shadow: 0 32px 74px rgba(0, 0, 0, 0.28);
+}
+
+.featured-work::after {
+  content: "01";
+  position: absolute;
+  right: 22px;
+  top: 15px;
+  color: rgba(244, 239, 231, 0.045);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(80px, 11vw, 160px);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.book-cover {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 252px);
+  display: block;
+  justify-self: center;
+  overflow: hidden;
+  border-radius: 3px 10px 10px 3px;
+  background: #111;
+  box-shadow:
+    -11px 18px 38px rgba(0, 0, 0, 0.46),
+    8px 3px 0 rgba(255, 255, 255, 0.025);
+  transform: rotate(-1.7deg);
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.book-cover:hover {
+  transform: translateY(-5px) rotate(0deg);
+  box-shadow:
+    -13px 26px 46px rgba(0, 0, 0, 0.52),
+    8px 3px 0 rgba(255, 255, 255, 0.03);
+}
+
+.book-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 670px;
+}
+
+.work-kicker {
+  color: var(--signal);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.19em;
+}
+
+.work-copy h3 {
+  max-width: 620px;
+  margin: 18px 0 0;
+  color: var(--paper);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(42px, 4.6vw, 72px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.book-author {
+  margin: 14px 0 0;
+  color: var(--paper-faint);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.work-description {
+  max-width: 620px;
+  margin: 27px 0 0;
+  color: var(--paper-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.book-meta {
+  margin-top: 25px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.book-meta span {
+  padding: 7px 10px;
+  border: 1px solid rgba(244, 239, 231, 0.12);
+  border-radius: 999px;
+  color: var(--paper-faint);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.work-link {
+  width: max-content;
+  min-height: 50px;
+  margin-top: 28px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  border-radius: 999px;
+  background: var(--signal);
+  color: #16100e;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.work-link:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
 .room-notes {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -942,6 +1106,10 @@ h1 em {
   color: var(--paper-muted);
   font-size: clamp(17px, 1.5vw, 22px);
   line-height: 1.75;
+}
+
+.why-copy > p:not(.why-signoff) + p:not(.why-signoff) {
+  margin-top: 20px;
 }
 
 .why-signoff {
@@ -1140,6 +1308,11 @@ footer a:hover {
     font-size: 16px;
   }
 
+  .maker-line {
+    grid-template-columns: 78px 1fr;
+    gap: 12px;
+  }
+
   .arrival-note {
     margin-top: 30px;
   }
@@ -1228,6 +1401,23 @@ footer a:hover {
 
   .room-line {
     margin-bottom: 30px;
+  }
+
+  .featured-work {
+    margin-bottom: 38px;
+    padding: 27px 22px 32px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    border-radius: 24px 34px 26px 30px;
+  }
+
+  .book-cover {
+    width: min(64vw, 210px);
+    justify-self: start;
+  }
+
+  .work-copy h3 {
+    font-size: clamp(42px, 13vw, 60px);
   }
 
   .room-notes {
