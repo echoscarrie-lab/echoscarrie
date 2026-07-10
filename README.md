@@ -15,4 +15,9 @@ npm run dev
 
 ## Publishing
 
-Every push to `main` builds a static export and publishes it to GitHub Pages.
+The editable source lives on `main`. A clean static build is published from the
+`gh-pages` branch:
+
+```bash
+./scripts/publish-pages.sh
+```
