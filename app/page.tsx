@@ -346,7 +346,7 @@ export default function Home() {
   const [history, setHistory] = useState<Echo[]>([]);
   const [visits, setVisits] = useState(1);
   const [memoryReady, setMemoryReady] = useState(false);
-  const [openRoom, setOpenRoom] = useState<FrequencyId | null>(null);
+  const [openRoom, setOpenRoom] = useState<FrequencyId | null>("human-ai");
   const [copyStatus, setCopyStatus] = useState("");
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
