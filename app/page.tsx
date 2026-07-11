@@ -34,6 +34,7 @@ const BOOK_URL = "https://www.amazon.com/dp/B0H6K9Z976";
 const MAOMAO_URL = "https://maomao.echoscarrie.com/";
 const MAOMAO_APP_URL = "https://apps.apple.com/us/app/maomao-desktop-pet/id6784916029?mt=12";
 const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
+const DEGRADED_URL = "https://degraded.echoscarrie.com/";
 
 const frequencies: Frequency[] = [
   {
@@ -848,6 +849,41 @@ export default function Home() {
                         </div>
                       </article>
                     )}
+                    {frequency.id === "field-notes" && (
+                      <article className="featured-work featured-degraded" aria-labelledby="degraded-title">
+                        <a
+                          className="degraded-preview"
+                          href={DEGRADED_URL}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label="Open DEGRADED human status protocol"
+                        >
+                          <span className="degraded-preview-top"><i /> DEGRADED / 206</span>
+                          <span className="degraded-preview-label">CURRENT HUMAN STATUS</span>
+                          <strong>DEGRADED</strong>
+                          <p>No action needed. I just need a little quiet.</p>
+                          <span className="degraded-preview-meta">RECOVERY: UNKNOWN&nbsp;&nbsp; / &nbsp;&nbsp;ACTION: NONE</span>
+                        </a>
+                        <div className="work-copy">
+                          <span className="work-kicker">LIVE HUMAN STATUS PROTOCOL</span>
+                          <h3 id="degraded-title">DEGRADED</h3>
+                          <p className="work-description">
+                            A quiet status page for the days when explaining
+                            yourself costs more energy than you have. Set one
+                            human state, share one link, and let silence do the rest.
+                          </p>
+                          <div className="book-meta" aria-label="DEGRADED details">
+                            <span>Private by link</span>
+                            <span>No conversation</span>
+                            <span>Free core</span>
+                          </div>
+                          <a className="work-link" href={DEGRADED_URL} target="_blank" rel="noreferrer">
+                            Send a quiet signal
+                            <span aria-hidden="true">↗</span>
+                          </a>
+                        </div>
+                      </article>
+                    )}
                     <div className="room-notes">
                       {frequency.notes.map((note, index) => (
                         <div key={note}>
@@ -890,6 +926,7 @@ export default function Home() {
         <a className="footer-brand" href="#top">ECHO / CARRIE</a>
         <span>A listening surface by Carrie · 2026</span>
         <div>
+          <a href={DEGRADED_URL} target="_blank" rel="noreferrer">DEGRADED</a>
           <a href="https://github.com/echoscarrie-lab/echoscarrie" target="_blank" rel="noreferrer">GitHub</a>
           <a href="#listen">Leave another signal ↑</a>
         </div>

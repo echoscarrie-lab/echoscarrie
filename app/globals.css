@@ -911,7 +911,8 @@ h1 em {
 }
 
 .featured-world,
-.featured-night {
+.featured-night,
+.featured-degraded {
   grid-template-columns: minmax(0, 1.24fr) minmax(300px, 0.76fr);
 }
 
@@ -929,6 +930,108 @@ h1 em {
 
 .featured-night::after {
   content: "03";
+}
+
+.featured-degraded {
+  border-color: rgba(167, 174, 181, 0.24);
+  background:
+    radial-gradient(circle at 24% 32%, rgba(146, 157, 167, 0.08), transparent 34%),
+    linear-gradient(145deg, #0a0a0a, #030303);
+}
+
+.featured-degraded::after {
+  content: "04";
+}
+
+.degraded-preview {
+  position: relative;
+  z-index: 1;
+  min-height: 330px;
+  padding: clamp(24px, 3vw, 42px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(190, 198, 205, 0.2);
+  border-radius: 2px;
+  background: #000;
+  box-shadow: 0 26px 58px rgba(0, 0, 0, 0.5);
+  color: #d9dee2;
+  text-decoration: none;
+  transition: transform 240ms ease, border-color 240ms ease;
+}
+
+.degraded-preview:hover {
+  transform: translateY(-5px);
+  border-color: rgba(219, 226, 231, 0.42);
+}
+
+.degraded-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255, 255, 255, 0.012) 3px 4px);
+}
+
+.degraded-preview-top,
+.degraded-preview-label,
+.degraded-preview-meta {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  text-transform: uppercase;
+}
+
+.degraded-preview-top {
+  position: absolute;
+  left: 22px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #7b858d;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+}
+
+.degraded-preview-top i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b5bec5;
+  box-shadow: 0 0 0 4px rgba(181, 190, 197, 0.09);
+}
+
+.degraded-preview-label {
+  color: #5f686f;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+}
+
+.degraded-preview strong {
+  margin-top: 14px;
+  color: #f1f3f4;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(34px, 5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.degraded-preview p {
+  max-width: 430px;
+  margin: 20px 0 0;
+  color: #8e979d;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.degraded-preview-meta {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  color: #4e565c;
+  font-size: 7px;
+  letter-spacing: 0.1em;
 }
 
 .world-preview {
@@ -1553,12 +1656,14 @@ footer a:hover {
   }
 
   .featured-world,
-  .featured-night {
+  .featured-night,
+  .featured-degraded {
     grid-template-columns: 1fr;
   }
 
   .world-preview,
-  .night-preview {
+  .night-preview,
+  .degraded-preview {
     border-radius: 16px 24px 18px 22px;
   }
 
