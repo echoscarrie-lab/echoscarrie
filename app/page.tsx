@@ -33,6 +33,7 @@ const VISIT_KEY = "echo-carrie-visits-v2";
 const BOOK_URL = "https://www.amazon.com/dp/B0H6K9Z976";
 const MAOMAO_URL = "https://maomao.echoscarrie.com/";
 const MAOMAO_APP_URL = "https://apps.apple.com/us/app/maomao-desktop-pet/id6784916029?mt=12";
+const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
 
 const frequencies: Frequency[] = [
   {
@@ -806,6 +807,44 @@ export default function Home() {
                               <span aria-hidden="true">↗</span>
                             </a>
                           </div>
+                        </div>
+                      </article>
+                    )}
+                    {frequency.id === "after-dark" && (
+                      <article className="featured-work featured-night" aria-labelledby="hush-title">
+                        <a
+                          className="night-preview"
+                          href={HUSH_URL}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label="Open the Whispering You to Sleep experience"
+                        >
+                          <Image
+                            src="/whispering-you-to-sleep.png"
+                            alt="Whispering You to Sleep rain and breathing experience"
+                            width={1920}
+                            height={1080}
+                            sizes="(max-width: 760px) 90vw, 720px"
+                          />
+                          <span className="night-live"><i aria-hidden="true" /> LIVE AFTER DARK</span>
+                        </a>
+                        <div className="work-copy">
+                          <span className="work-kicker">LATE-NIGHT WEB EXPERIENCE</span>
+                          <h3 id="hush-title">Whispering You to Sleep</h3>
+                          <p className="work-description">
+                            A pillow-side breathing companion with soft rain
+                            sounds and gentle whispers — made to quiet the room,
+                            slow the breath, and make falling asleep feel less alone.
+                          </p>
+                          <div className="book-meta" aria-label="Experience details">
+                            <span>Rain sounds</span>
+                            <span>Breathing</span>
+                            <span>中文 / EN</span>
+                          </div>
+                          <a className="work-link" href={HUSH_URL} target="_blank" rel="noreferrer">
+                            Enter the rain
+                            <span aria-hidden="true">↗</span>
+                          </a>
                         </div>
                       </article>
                     )}

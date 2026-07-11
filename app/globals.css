@@ -910,12 +910,25 @@ h1 em {
   pointer-events: none;
 }
 
-.featured-world {
+.featured-world,
+.featured-night {
   grid-template-columns: minmax(0, 1.24fr) minmax(300px, 0.76fr);
 }
 
 .featured-world::after {
   content: "02";
+}
+
+.featured-night {
+  border-color: rgba(215, 163, 203, 0.3);
+  background:
+    radial-gradient(circle at 22% 32%, rgba(95, 108, 177, 0.16), transparent 35%),
+    radial-gradient(circle at 70% 62%, rgba(168, 90, 111, 0.1), transparent 35%),
+    linear-gradient(145deg, rgba(21, 21, 31, 0.99), rgba(10, 9, 14, 0.995));
+}
+
+.featured-night::after {
+  content: "03";
 }
 
 .world-preview {
@@ -964,6 +977,56 @@ h1 em {
   border-radius: 50%;
   background: #8bd8aa;
   box-shadow: 0 0 0 4px rgba(139, 216, 170, 0.14);
+}
+
+.night-preview {
+  position: relative;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(216, 200, 238, 0.2);
+  border-radius: 20px 30px 22px 26px;
+  background: #080910;
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.46);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.night-preview:hover {
+  transform: translateY(-5px);
+  border-color: rgba(215, 163, 203, 0.5);
+  box-shadow: 0 34px 68px rgba(0, 0, 0, 0.56);
+}
+
+.night-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.night-live {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(7, 8, 16, 0.82);
+  color: #f4efe7;
+  backdrop-filter: blur(8px);
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+}
+
+.night-live i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d7a3cb;
+  box-shadow: 0 0 0 4px rgba(215, 163, 203, 0.14);
 }
 
 .book-cover {
@@ -1489,11 +1552,13 @@ footer a:hover {
     border-radius: 24px 34px 26px 30px;
   }
 
-  .featured-world {
+  .featured-world,
+  .featured-night {
     grid-template-columns: 1fr;
   }
 
-  .world-preview {
+  .world-preview,
+  .night-preview {
     border-radius: 16px 24px 18px 22px;
   }
 
