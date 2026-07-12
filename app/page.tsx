@@ -36,6 +36,7 @@ const MAOMAO_APP_URL = "https://apps.apple.com/us/app/maomao-desktop-pet/id67849
 const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
 const BETWEEN_URL = "https://between-us-pilot.echoscarrie.chatgpt.site/";
 const DEGRADED_URL = "https://degraded.echoscarrie.com/";
+const CYBER_TOMB_URL = "https://cyber-tomb-social-battery.echoscarrie.chatgpt.site/";
 
 const frequencies: Frequency[] = [
   {
@@ -890,39 +891,78 @@ export default function Home() {
                       </>
                     )}
                     {frequency.id === "field-notes" && (
-                      <article className="featured-work featured-degraded" aria-labelledby="degraded-title">
-                        <a
-                          className="degraded-preview"
-                          href={DEGRADED_URL}
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Open DEGRADED human status protocol"
-                        >
-                          <span className="degraded-preview-top"><i /> DEGRADED / 206</span>
-                          <span className="degraded-preview-label">CURRENT HUMAN STATUS</span>
-                          <strong>DEGRADED</strong>
-                          <p>No action needed. I just need a little quiet.</p>
-                          <span className="degraded-preview-meta">RECOVERY: UNKNOWN&nbsp;&nbsp; / &nbsp;&nbsp;ACTION: NONE</span>
-                        </a>
-                        <div className="work-copy">
-                          <span className="work-kicker">LIVE HUMAN STATUS PROTOCOL</span>
-                          <h3 id="degraded-title">DEGRADED</h3>
-                          <p className="work-description">
-                            A quiet status page for the days when explaining
-                            yourself costs more energy than you have. Set one
-                            human state, share one link, and let silence do the rest.
-                          </p>
-                          <div className="book-meta" aria-label="DEGRADED details">
-                            <span>Private by link</span>
-                            <span>No conversation</span>
-                            <span>Free core</span>
-                          </div>
-                          <a className="work-link" href={DEGRADED_URL} target="_blank" rel="noreferrer">
-                            Send a quiet signal
-                            <span aria-hidden="true">↗</span>
+                      <>
+                        <article className="featured-work featured-degraded" aria-labelledby="degraded-title">
+                          <a
+                            className="degraded-preview"
+                            href={DEGRADED_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Open DEGRADED human status protocol"
+                          >
+                            <span className="degraded-preview-top"><i /> DEGRADED / 206</span>
+                            <span className="degraded-preview-label">CURRENT HUMAN STATUS</span>
+                            <strong>DEGRADED</strong>
+                            <p>No action needed. I just need a little quiet.</p>
+                            <span className="degraded-preview-meta">RECOVERY: UNKNOWN&nbsp;&nbsp; / &nbsp;&nbsp;ACTION: NONE</span>
                           </a>
-                        </div>
-                      </article>
+                          <div className="work-copy">
+                            <span className="work-kicker">LIVE HUMAN STATUS PROTOCOL</span>
+                            <h3 id="degraded-title">DEGRADED</h3>
+                            <p className="work-description">
+                              A quiet status page for the days when explaining
+                              yourself costs more energy than you have. Set one
+                              human state, share one link, and let silence do the rest.
+                            </p>
+                            <div className="book-meta" aria-label="DEGRADED details">
+                              <span>Private by link</span>
+                              <span>No conversation</span>
+                              <span>Free core</span>
+                            </div>
+                            <a className="work-link" href={DEGRADED_URL} target="_blank" rel="noreferrer">
+                              Send a quiet signal
+                              <span aria-hidden="true">↗</span>
+                            </a>
+                          </div>
+                        </article>
+
+                        <article className="featured-work featured-tomb" aria-labelledby="tomb-title">
+                          <a
+                            className="tomb-preview"
+                            href={CYBER_TOMB_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Open Cyber Tomb for Your Social Battery"
+                          >
+                            <Image
+                              src="/cyber-tomb-social-battery.png"
+                              alt="A neon green social battery resting inside a transparent pixel coffin"
+                              width={1731}
+                              height={909}
+                              sizes="(max-width: 760px) 90vw, 720px"
+                            />
+                            <span className="tomb-live"><i aria-hidden="true" /> DAILY BURIAL RITUAL</span>
+                          </a>
+                          <div className="work-copy">
+                            <span className="work-kicker">SOCIAL BATTERY MEMORIAL</span>
+                            <h3 id="tomb-title">Cyber Tomb</h3>
+                            <p className="work-description">
+                              Every interaction costs something. Lower the meter
+                              honestly. At zero, the light goes out and the cyber
+                              coffin closes with dignity.
+                            </p>
+                            <div className="book-meta" aria-label="Cyber Tomb details">
+                              <span>Social battery</span>
+                              <span>Saved locally</span>
+                              <span>Resets tomorrow</span>
+                            </div>
+                            <a className="work-link" href={CYBER_TOMB_URL} target="_blank" rel="noreferrer">
+                              Begin the burial
+                              <span aria-hidden="true">↗</span>
+                            </a>
+                          </div>
+                        </article>
+                      </>
                     )}
                     <div className="room-notes">
                       {frequency.notes.map((note, index) => (

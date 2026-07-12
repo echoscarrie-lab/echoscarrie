@@ -913,7 +913,8 @@ h1 em {
 .featured-world,
 .featured-night,
 .featured-degraded,
-.featured-between {
+.featured-between,
+.featured-tomb {
   grid-template-columns: minmax(0, 1.24fr) minmax(300px, 0.76fr);
 }
 
@@ -942,6 +943,27 @@ h1 em {
 
 .featured-degraded::after {
   content: "04";
+}
+
+.featured-tomb {
+  border-color: rgba(158, 255, 45, 0.3);
+  background:
+    radial-gradient(circle at 24% 34%, rgba(157, 255, 42, 0.12), transparent 35%),
+    linear-gradient(145deg, #080d05, #020400);
+}
+
+.featured-tomb::after {
+  content: "04";
+  color: rgba(158, 255, 45, 0.055);
+}
+
+.featured-tomb .work-kicker {
+  color: #9eff2d;
+}
+
+.featured-tomb .work-link {
+  background: #9eff2d;
+  color: #091003;
 }
 
 .featured-between {
@@ -1068,6 +1090,57 @@ h1 em {
   color: #4e565c;
   font-size: 7px;
   letter-spacing: 0.1em;
+}
+
+.tomb-preview {
+  position: relative;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(158, 255, 45, 0.26);
+  border-radius: 2px 22px 4px 18px;
+  background: #020400;
+  box-shadow: 0 26px 58px rgba(0, 0, 0, 0.5);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.tomb-preview:hover {
+  transform: translateY(-5px);
+  border-color: rgba(158, 255, 45, 0.58);
+  box-shadow: 0 34px 68px rgba(54, 94, 10, 0.22);
+}
+
+.tomb-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tomb-live {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(158, 255, 45, 0.2);
+  border-radius: 2px;
+  background: rgba(2, 7, 0, 0.86);
+  color: #b8ff62;
+  backdrop-filter: blur(8px);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+
+.tomb-live i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9eff2d;
+  box-shadow: 0 0 0 4px rgba(158, 255, 45, 0.14);
 }
 
 .world-preview {
@@ -1742,14 +1815,16 @@ footer a:hover {
   .featured-world,
   .featured-night,
   .featured-degraded,
-  .featured-between {
+  .featured-between,
+  .featured-tomb {
     grid-template-columns: 1fr;
   }
 
   .world-preview,
   .night-preview,
   .degraded-preview,
-  .between-preview {
+  .between-preview,
+  .tomb-preview {
     border-radius: 16px 24px 18px 22px;
   }
 
