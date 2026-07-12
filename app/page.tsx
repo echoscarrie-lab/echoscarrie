@@ -34,6 +34,7 @@ const BOOK_URL = "https://www.amazon.com/dp/B0H6K9Z976";
 const MAOMAO_URL = "https://maomao.echoscarrie.com/";
 const MAOMAO_APP_URL = "https://apps.apple.com/us/app/maomao-desktop-pet/id6784916029?mt=12";
 const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
+const BETWEEN_URL = "https://between-us-pilot.echoscarrie.chatgpt.site/";
 const DEGRADED_URL = "https://degraded.echoscarrie.com/";
 
 const frequencies: Frequency[] = [
@@ -812,42 +813,81 @@ export default function Home() {
                       </article>
                     )}
                     {frequency.id === "after-dark" && (
-                      <article className="featured-work featured-night" aria-labelledby="hush-title">
-                        <a
-                          className="night-preview"
-                          href={HUSH_URL}
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Open the Whispering You to Sleep experience"
-                        >
-                          <Image
-                            src="/whispering-you-to-sleep.png"
-                            alt="Whispering You to Sleep rain and breathing experience"
-                            width={1920}
-                            height={1080}
-                            sizes="(max-width: 760px) 90vw, 720px"
-                          />
-                          <span className="night-live"><i aria-hidden="true" /> LIVE AFTER DARK</span>
-                        </a>
-                        <div className="work-copy">
-                          <span className="work-kicker">LATE-NIGHT WEB EXPERIENCE</span>
-                          <h3 id="hush-title">Whispering You to Sleep</h3>
-                          <p className="work-description">
-                            A pillow-side breathing companion with soft rain
-                            sounds and gentle whispers — made to quiet the room,
-                            slow the breath, and make falling asleep feel less alone.
-                          </p>
-                          <div className="book-meta" aria-label="Experience details">
-                            <span>Rain sounds</span>
-                            <span>Breathing</span>
-                            <span>中文 / EN</span>
-                          </div>
-                          <a className="work-link" href={HUSH_URL} target="_blank" rel="noreferrer">
-                            Enter the rain
-                            <span aria-hidden="true">↗</span>
+                      <>
+                        <article className="featured-work featured-night" aria-labelledby="hush-title">
+                          <a
+                            className="night-preview"
+                            href={HUSH_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Open the Whispering You to Sleep experience"
+                          >
+                            <Image
+                              src="/whispering-you-to-sleep.png"
+                              alt="Whispering You to Sleep rain and breathing experience"
+                              width={1920}
+                              height={1080}
+                              sizes="(max-width: 760px) 90vw, 720px"
+                            />
+                            <span className="night-live"><i aria-hidden="true" /> LIVE AFTER DARK</span>
                           </a>
-                        </div>
-                      </article>
+                          <div className="work-copy">
+                            <span className="work-kicker">LATE-NIGHT WEB EXPERIENCE</span>
+                            <h3 id="hush-title">Whispering You to Sleep</h3>
+                            <p className="work-description">
+                              A pillow-side breathing companion with soft rain
+                              sounds and gentle whispers — made to quiet the room,
+                              slow the breath, and make falling asleep feel less alone.
+                            </p>
+                            <div className="book-meta" aria-label="Experience details">
+                              <span>Rain sounds</span>
+                              <span>Breathing</span>
+                              <span>中文 / EN</span>
+                            </div>
+                            <a className="work-link" href={HUSH_URL} target="_blank" rel="noreferrer">
+                              Enter the rain
+                              <span aria-hidden="true">↗</span>
+                            </a>
+                          </div>
+                        </article>
+
+                        <article className="featured-work featured-between" aria-labelledby="between-title">
+                          <a
+                            className="between-preview"
+                            href={BETWEEN_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Open the Between Us two-person experiment"
+                          >
+                            <Image
+                              src="/between-us-pilot.png"
+                              alt="Between Us — You know each other, but do you read each other?"
+                              width={1733}
+                              height={907}
+                              sizes="(max-width: 760px) 90vw, 720px"
+                            />
+                            <span className="between-live"><i aria-hidden="true" /> EXPERIMENT NO. 01</span>
+                          </a>
+                          <div className="work-copy">
+                            <span className="work-kicker">TWO-PERSON EXPERIMENT</span>
+                            <h3 id="between-title">Between Us</h3>
+                            <p className="work-description">
+                              You know each other. But do you read each other?
+                              Answer separately, then discover the tiny differences
+                              behind your biggest almost-understandings.
+                            </p>
+                            <div className="book-meta" aria-label="Experiment details">
+                              <span>Two people</span>
+                              <span>No sign-up</span>
+                              <span>Private link</span>
+                            </div>
+                            <a className="work-link" href={BETWEEN_URL} target="_blank" rel="noreferrer">
+                              See what sits between you
+                              <span aria-hidden="true">↗</span>
+                            </a>
+                          </div>
+                        </article>
+                      </>
                     )}
                     {frequency.id === "field-notes" && (
                       <article className="featured-work featured-degraded" aria-labelledby="degraded-title">

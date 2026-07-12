@@ -912,7 +912,8 @@ h1 em {
 
 .featured-world,
 .featured-night,
-.featured-degraded {
+.featured-degraded,
+.featured-between {
   grid-template-columns: minmax(0, 1.24fr) minmax(300px, 0.76fr);
 }
 
@@ -941,6 +942,41 @@ h1 em {
 
 .featured-degraded::after {
   content: "04";
+}
+
+.featured-between {
+  border-color: rgba(22, 19, 16, 0.2);
+  background:
+    radial-gradient(circle at 18% 28%, rgba(255, 88, 75, 0.12), transparent 32%),
+    radial-gradient(circle at 72% 62%, rgba(102, 58, 255, 0.1), transparent 32%),
+    #eee8dc;
+}
+
+.featured-between::after {
+  content: "03";
+  color: rgba(22, 19, 16, 0.055);
+}
+
+.featured-between .work-kicker {
+  color: #ff594d;
+}
+
+.featured-between .work-copy h3 {
+  color: #17130f;
+}
+
+.featured-between .work-description {
+  color: rgba(23, 19, 15, 0.72);
+}
+
+.featured-between .book-meta span {
+  border-color: rgba(23, 19, 15, 0.16);
+  color: rgba(23, 19, 15, 0.62);
+}
+
+.featured-between .work-link {
+  background: #17130f;
+  color: #f4efe7;
 }
 
 .degraded-preview {
@@ -1130,6 +1166,54 @@ h1 em {
   border-radius: 50%;
   background: #d7a3cb;
   box-shadow: 0 0 0 4px rgba(215, 163, 203, 0.14);
+}
+
+.between-preview {
+  position: relative;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(23, 19, 15, 0.2);
+  border-radius: 4px 24px 6px 20px;
+  background: #f2ede3;
+  box-shadow: 0 22px 48px rgba(32, 24, 18, 0.2);
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.between-preview:hover {
+  transform: translateY(-5px) rotate(-0.25deg);
+  box-shadow: 0 30px 60px rgba(32, 24, 18, 0.28);
+}
+
+.between-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.between-live {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 999px;
+  background: rgba(244, 239, 231, 0.9);
+  color: #17130f;
+  backdrop-filter: blur(8px);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.between-live i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #beff22;
+  box-shadow: 0 0 0 4px rgba(190, 255, 34, 0.18);
 }
 
 .book-cover {
@@ -1657,13 +1741,15 @@ footer a:hover {
 
   .featured-world,
   .featured-night,
-  .featured-degraded {
+  .featured-degraded,
+  .featured-between {
     grid-template-columns: 1fr;
   }
 
   .world-preview,
   .night-preview,
-  .degraded-preview {
+  .degraded-preview,
+  .between-preview {
     border-radius: 16px 24px 18px 22px;
   }
 
