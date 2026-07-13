@@ -359,6 +359,8 @@ export default function Home() {
   const formRef = useRef<HTMLDivElement | null>(null);
   const responseRef = useRef<HTMLDivElement | null>(null);
   const surfaceRef = useRef<HTMLElement | null>(null);
+  const echoTargetRef = useRef({ x: 0, y: 0 });
+  const echoPositionRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     let nextVisit = 1;
@@ -401,11 +403,39 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const surface = surfaceRef.current;
+    if (!surface || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let frame = 0;
+    const followPointer = () => {
+      const current = echoPositionRef.current;
+      const target = echoTargetRef.current;
+
+      current.x += (target.x - current.x) * 0.035;
+      current.y += (target.y - current.y) * 0.035;
+      surface.style.setProperty("--echo-shift-x", `${current.x.toFixed(2)}px`);
+      surface.style.setProperty("--echo-shift-y", `${current.y.toFixed(2)}px`);
+      frame = window.requestAnimationFrame(followPointer);
+    };
+
+    frame = window.requestAnimationFrame(followPointer);
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
+
   function handlePointerMove(event: PointerEvent<HTMLElement>) {
     const surface = surfaceRef.current;
     if (!surface || event.pointerType === "touch") return;
     surface.style.setProperty("--cursor-x", `${event.clientX}px`);
     surface.style.setProperty("--cursor-y", `${event.clientY}px`);
+    echoTargetRef.current = {
+      x: (event.clientX / window.innerWidth - 0.5) * 24,
+      y: (event.clientY / window.innerHeight - 0.5) * 16,
+    };
+  }
+
+  function releasePointer() {
+    echoTargetRef.current = { x: 0, y: 0 };
   }
 
   function deliverEcho(thought: string, kind: EchoKind) {
@@ -500,9 +530,10 @@ export default function Home() {
 
   return (
     <main
-      className={`echo-site signal-${echo?.frequency ?? "idle"}`}
+      className={`echo-site signal-${echo?.frequency ?? "idle"} phase-${phase} ${message.trim() ? "has-signal" : ""}`}
       ref={surfaceRef}
       onPointerMove={handlePointerMove}
+      onPointerLeave={releasePointer}
     >
       <div className="ambient-grain" aria-hidden="true" />
 
@@ -524,6 +555,8 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
+        <div className="echo-presence" aria-hidden="true" />
+
         <div className="hero-copy">
           <p className="eyebrow">This website listens before it speaks.</p>
           <h1>
