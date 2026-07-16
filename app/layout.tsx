@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AnalyticsTracker } from "./AnalyticsTracker";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -159,6 +160,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <AnalyticsTracker />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

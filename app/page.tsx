@@ -2,6 +2,7 @@
 
 import { FormEvent, PointerEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { trackAnalytics } from "../lib/analytics-client";
 
 type FrequencyId = "human-ai" | "tiny-worlds" | "after-dark" | "field-notes";
 type EchoKind = "MIRROR" | "TURN" | "DOOR";
@@ -447,6 +448,7 @@ export default function Home() {
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = setTimeout(() => {
       const nextEcho = createEcho(thought, kind, history.length);
+      trackAnalytics("echo_created");
       setEcho(nextEcho);
       setHistory((items) => [nextEcho, ...items].slice(0, 8));
       setPhase("answered");
@@ -578,7 +580,7 @@ export default function Home() {
             <span className="arrival-mark" aria-hidden="true">✦</span>
             <div>
               <strong>{arrivalLine}</strong>
-              <span>Your words stay on this device. Nothing is uploaded.</span>
+              <span>Your words stay on this device. Only anonymous visit and interaction counts are sent.</span>
             </div>
           </div>
         </div>
