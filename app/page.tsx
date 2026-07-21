@@ -861,8 +861,8 @@ export default function Home() {
                             <Image
                               src="/candy-cottage.jpg"
                               alt="Candy Cottage's soft pink room with playful tools for letting go of a bad thought"
-                              width={1320}
-                              height={2868}
+                              width={1448}
+                              height={905}
                               sizes="(max-width: 760px) 90vw, 720px"
                             />
                             <span className="candy-live"><i aria-hidden="true" /> NOW ON IOS</span>
