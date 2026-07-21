@@ -34,6 +34,7 @@ const VISIT_KEY = "echo-carrie-visits-v2";
 const BOOK_URL = "https://www.amazon.com/dp/B0H6K9Z976";
 const MAOMAO_URL = "https://maomao.echoscarrie.com/";
 const MAOMAO_APP_URL = "https://apps.apple.com/us/app/maomao-desktop-pet/id6784916029?mt=12";
+const CANDY_COTTAGE_APP_URL = "https://apps.apple.com/app/id6788266073";
 const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
 const BETWEEN_URL = "https://between-us-pilot.echoscarrie.chatgpt.site/";
 const DEGRADED_URL = "https://degraded.echoscarrie.com/";
@@ -805,48 +806,87 @@ export default function Home() {
                       </article>
                     )}
                     {frequency.id === "tiny-worlds" && (
-                      <article className="featured-work featured-world" aria-labelledby="maomao-title">
-                        <a
-                          className="world-preview"
-                          href={MAOMAO_URL}
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="Visit the MaoMao Desktop Pet website"
-                        >
-                          <Image
-                            src="/maomao-desktop-pet.png"
-                            alt="MaoMao Desktop Pet walking, napping, and staying nearby on a Mac desktop"
-                            width={1600}
-                            height={1000}
-                            sizes="(max-width: 760px) 90vw, 720px"
-                          />
-                          <span className="world-live"><i aria-hidden="true" /> LIVE TINY WORLD</span>
-                        </a>
-                        <div className="work-copy">
-                          <span className="work-kicker">MAC DESKTOP COMPANION</span>
-                          <h3 id="maomao-title">MaoMao Desktop Pet</h3>
-                          <p className="work-description">
-                            A tiny illustrated cat that walks, naps, plays, and
-                            keeps you company while you work — a small world that
-                            lives quietly on your Mac.
-                          </p>
-                          <div className="book-meta" aria-label="MaoMao details">
-                            <span>Made for Mac</span>
-                            <span>No account</span>
-                            <span>No tracking</span>
+                      <>
+                        <article className="featured-work featured-world" aria-labelledby="maomao-title">
+                          <a
+                            className="world-preview"
+                            href={MAOMAO_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Visit the MaoMao Desktop Pet website"
+                          >
+                            <Image
+                              src="/maomao-desktop-pet.png"
+                              alt="MaoMao Desktop Pet walking, napping, and staying nearby on a Mac desktop"
+                              width={1600}
+                              height={1000}
+                              sizes="(max-width: 760px) 90vw, 720px"
+                            />
+                            <span className="world-live"><i aria-hidden="true" /> LIVE TINY WORLD</span>
+                          </a>
+                          <div className="work-copy">
+                            <span className="work-kicker">MAC DESKTOP COMPANION</span>
+                            <h3 id="maomao-title">MaoMao Desktop Pet</h3>
+                            <p className="work-description">
+                              A tiny illustrated cat that walks, naps, plays, and
+                              keeps you company while you work — a small world that
+                              lives quietly on your Mac.
+                            </p>
+                            <div className="book-meta" aria-label="MaoMao details">
+                              <span>Made for Mac</span>
+                              <span>No account</span>
+                              <span>No tracking</span>
+                            </div>
+                            <div className="work-actions">
+                              <a className="work-link" href={MAOMAO_URL} target="_blank" rel="noreferrer">
+                                Visit MaoMao
+                                <span aria-hidden="true">↗</span>
+                              </a>
+                              <a className="work-link is-secondary" href={MAOMAO_APP_URL} target="_blank" rel="noreferrer">
+                                Mac App Store
+                                <span aria-hidden="true">↗</span>
+                              </a>
+                            </div>
                           </div>
-                          <div className="work-actions">
-                            <a className="work-link" href={MAOMAO_URL} target="_blank" rel="noreferrer">
-                              Visit MaoMao
+                        </article>
+
+                        <article className="featured-work featured-candy" aria-labelledby="candy-cottage-title">
+                          <a
+                            className="candy-preview"
+                            href={CANDY_COTTAGE_APP_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="View Candy Cottage on the App Store"
+                          >
+                            <Image
+                              src="/candy-cottage.jpg"
+                              alt="Candy Cottage's soft pink room with playful tools for letting go of a bad thought"
+                              width={1320}
+                              height={2868}
+                              sizes="(max-width: 760px) 90vw, 720px"
+                            />
+                            <span className="candy-live"><i aria-hidden="true" /> NOW ON IOS</span>
+                          </a>
+                          <div className="work-copy">
+                            <span className="work-kicker">TINY IOS RITUAL</span>
+                            <h3 id="candy-cottage-title">Candy Cottage</h3>
+                            <p className="work-description">
+                              Leave a bad thought on the table. Smash, burn, tear,
+                              shred, slide, or erase it — and get a piece of candy
+                              when it is gone.
+                            </p>
+                            <div className="book-meta" aria-label="Candy Cottage details">
+                              <span>iPhone &amp; iPad</span>
+                              <span>No account</span>
+                              <span>Works offline</span>
+                            </div>
+                            <a className="work-link" href={CANDY_COTTAGE_APP_URL} target="_blank" rel="noreferrer">
+                              Open in the App Store
                               <span aria-hidden="true">↗</span>
                             </a>
-                            <a className="work-link is-secondary" href={MAOMAO_APP_URL} target="_blank" rel="noreferrer">
-                              Mac App Store
-                              <span aria-hidden="true">↗</span>
-                            </a>
                           </div>
-                        </div>
-                      </article>
+                        </article>
+                      </>
                     )}
                     {frequency.id === "after-dark" && (
                       <>

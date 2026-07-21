@@ -66,6 +66,18 @@ const structuredData = {
             "@type": "ListItem",
             position: 3,
             item: {
+              "@type": "SoftwareApplication",
+              name: "Candy Cottage",
+              url: "https://apps.apple.com/app/id6788266073",
+              image: "https://echoscarrie.com/candy-cottage.jpg",
+              applicationCategory: "EntertainmentApplication",
+              operatingSystem: "iOS, iPadOS",
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            item: {
               "@type": "WebApplication",
               name: "Whispering You to Sleep",
               url: "https://hush-whisper-dreams.lovable.app/",
@@ -76,7 +88,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 4,
+            position: 5,
             item: {
               "@type": "WebApplication",
               name: "Between Us",
@@ -87,7 +99,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 5,
+            position: 6,
             item: {
               "@type": "WebApplication",
               name: "DEGRADED",
@@ -97,7 +109,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 6,
+            position: 7,
             item: {
               "@type": "WebApplication",
               name: "Cyber Tomb for Your Social Battery",

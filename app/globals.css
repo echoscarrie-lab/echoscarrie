@@ -965,6 +965,7 @@ h1 em {
 }
 
 .featured-world,
+.featured-candy,
 .featured-night,
 .featured-degraded,
 .featured-between,
@@ -974,6 +975,28 @@ h1 em {
 
 .featured-world::after {
   content: "02";
+}
+
+.featured-candy {
+  border-color: rgba(255, 177, 195, 0.3);
+  background:
+    radial-gradient(circle at 20% 32%, rgba(255, 177, 195, 0.13), transparent 34%),
+    radial-gradient(circle at 72% 70%, rgba(255, 206, 143, 0.08), transparent 34%),
+    linear-gradient(145deg, rgba(30, 22, 25, 0.99), rgba(14, 12, 14, 0.995));
+}
+
+.featured-candy::after {
+  content: "02";
+  color: rgba(255, 177, 195, 0.055);
+}
+
+.featured-candy .work-kicker {
+  color: #ffb1c3;
+}
+
+.featured-candy .work-link {
+  background: #ffb1c3;
+  color: #241317;
 }
 
 .featured-night {
@@ -1243,6 +1266,64 @@ h1 em {
   border-radius: 50%;
   background: #8bd8aa;
   box-shadow: 0 0 0 4px rgba(139, 216, 170, 0.14);
+}
+
+.candy-preview {
+  position: relative;
+  z-index: 1;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid rgba(255, 217, 224, 0.22);
+  border-radius: 20px 30px 22px 26px;
+  background: #fff3eb;
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.38);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.candy-preview:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 190, 205, 0.55);
+  box-shadow: 0 34px 68px rgba(61, 30, 39, 0.46);
+}
+
+.candy-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 18%;
+  transition: transform 320ms ease;
+}
+
+.candy-preview:hover img {
+  transform: scale(1.02);
+}
+
+.candy-live {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(255, 177, 195, 0.2);
+  border-radius: 999px;
+  background: rgba(44, 24, 31, 0.84);
+  color: #fff1f5;
+  backdrop-filter: blur(8px);
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+}
+
+.candy-live i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff9eb6;
+  box-shadow: 0 0 0 4px rgba(255, 158, 182, 0.15);
 }
 
 .night-preview {
@@ -1911,6 +1992,7 @@ footer a:hover {
   }
 
   .featured-world,
+  .featured-candy,
   .featured-night,
   .featured-degraded,
   .featured-between,
@@ -1919,6 +2001,7 @@ footer a:hover {
   }
 
   .world-preview,
+  .candy-preview,
   .night-preview,
   .degraded-preview,
   .between-preview,
