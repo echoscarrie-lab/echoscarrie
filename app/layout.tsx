@@ -68,10 +68,16 @@ const structuredData = {
             item: {
               "@type": "SoftwareApplication",
               name: "Candy Cottage",
-              url: "https://apps.apple.com/app/id6788266073",
-              image: "https://echoscarrie.com/candy-cottage.jpg",
+              url: "https://echoscarrie.com/candy-cottage/",
+              downloadUrl: "https://apps.apple.com/app/id6788266073",
+              image: "https://echoscarrie.com/candy-cottage-icon.png",
               applicationCategory: "EntertainmentApplication",
               operatingSystem: "iOS, iPadOS",
+              offers: {
+                "@type": "Offer",
+                price: 0,
+                priceCurrency: "USD",
+              },
             },
           },
           {

@@ -35,6 +35,7 @@ const BOOK_URL = "https://www.amazon.com/dp/B0H6K9Z976";
 const MAOMAO_URL = "https://maomao.echoscarrie.com/";
 const MAOMAO_APP_URL = "https://apps.apple.com/us/app/maomao-desktop-pet/id6784916029?mt=12";
 const CANDY_COTTAGE_APP_URL = "https://apps.apple.com/app/id6788266073";
+const CANDY_COTTAGE_URL = "/candy-cottage/";
 const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
 const BETWEEN_URL = "https://between-us-pilot.echoscarrie.chatgpt.site/";
 const DEGRADED_URL = "https://degraded.echoscarrie.com/";
@@ -853,10 +854,8 @@ export default function Home() {
                         <article className="featured-work featured-candy" aria-labelledby="candy-cottage-title">
                           <a
                             className="candy-preview"
-                            href={CANDY_COTTAGE_APP_URL}
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label="View Candy Cottage on the App Store"
+                            href={CANDY_COTTAGE_URL}
+                            aria-label="Discover Candy Cottage"
                           >
                             <Image
                               src="/candy-cottage.jpg"
@@ -880,10 +879,16 @@ export default function Home() {
                               <span>No account</span>
                               <span>Works offline</span>
                             </div>
-                            <a className="work-link" href={CANDY_COTTAGE_APP_URL} target="_blank" rel="noreferrer">
-                              Open in the App Store
-                              <span aria-hidden="true">↗</span>
-                            </a>
+                            <div className="work-actions">
+                              <a className="work-link" href={CANDY_COTTAGE_URL}>
+                                Discover Candy Cottage
+                                <span aria-hidden="true">→</span>
+                              </a>
+                              <a className="work-link is-secondary" href={CANDY_COTTAGE_APP_URL} target="_blank" rel="noreferrer">
+                                App Store
+                                <span aria-hidden="true">↗</span>
+                              </a>
+                            </div>
                           </div>
                         </article>
                       </>
