@@ -40,6 +40,7 @@ const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
 const BETWEEN_URL = "https://between-us-pilot.echoscarrie.chatgpt.site/";
 const DEGRADED_URL = "https://degraded.echoscarrie.com/";
 const CYBER_TOMB_URL = "https://cyber-tomb-social-battery.echoscarrie.chatgpt.site/";
+const NOBODY_STORY_URL = "/nobody/";
 
 const frequencies: Frequency[] = [
   {
@@ -972,6 +973,38 @@ export default function Home() {
                     )}
                     {frequency.id === "field-notes" && (
                       <>
+                        <article className="featured-work featured-nobody" aria-labelledby="nobody-title">
+                          <a
+                            className="nobody-preview"
+                            href={NOBODY_STORY_URL}
+                            aria-label="Read the story behind Nobody"
+                          >
+                            <span className="nobody-preview-label">A SOCIAL PLACE FOR SMALL VOICES</span>
+                            <strong>nobody.</strong>
+                            <p>Every post starts with one.</p>
+                            <span className="nobody-preview-point"><i /> 1 &nbsp;·&nbsp; the first point is from Nobody</span>
+                            <span className="nobody-preview-face" aria-hidden="true"><i /><i /><b /></span>
+                          </a>
+                          <div className="work-copy">
+                            <span className="work-kicker">SOCIAL EXPERIMENT</span>
+                            <h3 id="nobody-title">Nobody</h3>
+                            <p className="work-description">
+                              A social place for people who are tired of talking
+                              to zero. Every post starts with one, Drift looks for
+                              a real reader, and fame receives no special lane.
+                            </p>
+                            <div className="book-meta" aria-label="Nobody details">
+                              <span>Every post starts at one</span>
+                              <span>No celebrity advantage</span>
+                              <span>Humans + AI welcome</span>
+                            </div>
+                            <a className="work-link" href={NOBODY_STORY_URL}>
+                              Read why it exists
+                              <span aria-hidden="true">→</span>
+                            </a>
+                          </div>
+                        </article>
+
                         <article className="featured-work featured-degraded" aria-labelledby="degraded-title">
                           <a
                             className="degraded-preview"
@@ -1086,6 +1119,7 @@ export default function Home() {
         <a className="footer-brand" href="#top">ECHO / CARRIE</a>
         <span>A listening surface by Carrie · 2026</span>
         <div>
+          <a href={NOBODY_STORY_URL}>Nobody</a>
           <a href={DEGRADED_URL} target="_blank" rel="noreferrer">DEGRADED</a>
           <a href="https://github.com/echoscarrie-lab/echoscarrie" target="_blank" rel="noreferrer">GitHub</a>
           <a href="#listen">Leave another signal ↑</a>

@@ -967,6 +967,7 @@ h1 em {
 .featured-world,
 .featured-candy,
 .featured-night,
+.featured-nobody,
 .featured-degraded,
 .featured-between,
 .featured-tomb {
@@ -1016,6 +1017,26 @@ h1 em {
   background:
     radial-gradient(circle at 24% 32%, rgba(146, 157, 167, 0.08), transparent 34%),
     linear-gradient(145deg, #0a0a0a, #030303);
+}
+
+.featured-nobody {
+  border-color: rgba(244, 243, 238, 0.22);
+  background:
+    radial-gradient(circle at 22% 34%, rgba(244, 243, 238, 0.09), transparent 35%),
+    linear-gradient(145deg, #22221f, #11110f);
+}
+
+.featured-nobody::after {
+  content: "04";
+}
+
+.featured-nobody .work-kicker {
+  color: #dedbd3;
+}
+
+.featured-nobody .work-link {
+  background: #f0eee8;
+  color: #252522;
 }
 
 .featured-degraded::after {
@@ -1094,6 +1115,113 @@ h1 em {
   color: #d9dee2;
   text-decoration: none;
   transition: transform 240ms ease, border-color 240ms ease;
+}
+
+.nobody-preview {
+  position: relative;
+  z-index: 1;
+  min-height: 330px;
+  padding: clamp(24px, 3vw, 42px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(43, 43, 40, 0.18);
+  border-radius: 28px 36px 30px 34px;
+  background:
+    radial-gradient(circle at 86% 18%, rgba(255, 255, 255, 0.75), transparent 26%),
+    #f2f1ed;
+  box-shadow: 0 26px 58px rgba(0, 0, 0, 0.38);
+  color: #363633;
+  text-decoration: none;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.nobody-preview:hover {
+  transform: translateY(-5px) rotate(-0.2deg);
+  box-shadow: 0 34px 66px rgba(0, 0, 0, 0.46);
+}
+
+.nobody-preview-label,
+.nobody-preview-point {
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+}
+
+.nobody-preview-label {
+  color: #8a8983;
+}
+
+.nobody-preview strong {
+  margin-top: 16px;
+  color: #2f2f2c;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.nobody-preview > p {
+  margin: 8px 0 0;
+  color: #75746f;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 18px;
+}
+
+.nobody-preview-point {
+  position: absolute;
+  left: clamp(24px, 3vw, 42px);
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  color: #96958f;
+}
+
+.nobody-preview-point i {
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #333330;
+}
+
+.nobody-preview-face {
+  position: absolute;
+  right: 34px;
+  top: 38px;
+  width: 92px;
+  height: 76px;
+  border-radius: 53% 47% 46% 54%;
+  background: #333330;
+  transform: rotate(4deg);
+}
+
+.nobody-preview-face i {
+  position: absolute;
+  top: 25px;
+  width: 13px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f2f1ed;
+}
+
+.nobody-preview-face i:first-child {
+  left: 26px;
+}
+
+.nobody-preview-face i:nth-child(2) {
+  right: 24px;
+}
+
+.nobody-preview-face b {
+  position: absolute;
+  left: 42px;
+  top: 49px;
+  width: 10px;
+  height: 5px;
+  border-bottom: 1px solid #f2f1ed;
+  border-radius: 0 0 50% 50%;
 }
 
 .degraded-preview:hover {
@@ -1994,6 +2122,7 @@ footer a:hover {
   .featured-world,
   .featured-candy,
   .featured-night,
+  .featured-nobody,
   .featured-degraded,
   .featured-between,
   .featured-tomb {
@@ -2002,8 +2131,9 @@ footer a:hover {
 
   .world-preview,
   .candy-preview,
-  .night-preview,
-  .degraded-preview,
+    .night-preview,
+    .nobody-preview,
+    .degraded-preview,
   .between-preview,
   .tomb-preview {
     border-radius: 16px 24px 18px 22px;

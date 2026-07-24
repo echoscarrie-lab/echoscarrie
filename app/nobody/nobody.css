@@ -1,0 +1,770 @@
+.nobody-story {
+  --nobody-paper: #f3f2ee;
+  --nobody-paper-deep: #e8e7e2;
+  --nobody-ink: #353532;
+  --nobody-muted: #74746f;
+  --nobody-faint: #a09f99;
+  --nobody-line: rgba(53, 53, 50, 0.14);
+  --nobody-signal: #de765c;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--nobody-ink);
+  background:
+    radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.82), transparent 28%),
+    radial-gradient(circle at 8% 55%, rgba(255, 255, 255, 0.55), transparent 24%),
+    var(--nobody-paper);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.nobody-story *,
+.nobody-story *::before,
+.nobody-story *::after {
+  box-sizing: border-box;
+}
+
+.nobody-story a:focus-visible {
+  outline-color: var(--nobody-signal);
+}
+
+.nobody-header,
+.nobody-hero,
+.nobody-origin,
+.nobody-system,
+.nobody-choices,
+.nobody-final,
+.nobody-footer {
+  width: min(100% - 72px, 1460px);
+  margin-inline: auto;
+}
+
+.nobody-header {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--nobody-line);
+  color: var(--nobody-muted);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.18em;
+}
+
+.nobody-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--nobody-ink);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+}
+
+.nobody-back span {
+  color: var(--nobody-signal);
+  font-size: 17px;
+}
+
+.nobody-hero {
+  min-height: calc(100svh - 88px);
+  padding-block: clamp(72px, 9vh, 126px);
+  display: grid;
+  grid-template-columns: minmax(420px, 0.9fr) minmax(520px, 1.1fr);
+  align-items: center;
+  gap: clamp(70px, 9vw, 150px);
+}
+
+.nobody-kicker,
+.nobody-section-label {
+  margin: 0;
+  color: var(--nobody-signal);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.2em;
+}
+
+.nobody-hero h1,
+.nobody-origin h2,
+.nobody-system h2,
+.nobody-choices h2,
+.nobody-final h2 {
+  font-family: "Iowan Old Style", Baskerville, "Baskerville Old Face", Georgia, serif;
+  font-weight: 400;
+}
+
+.nobody-hero h1 {
+  max-width: 720px;
+  margin: 25px 0 0;
+  font-size: clamp(70px, 7.4vw, 118px);
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+}
+
+.nobody-hero h1 em {
+  display: block;
+  color: var(--nobody-muted);
+  font-weight: 400;
+}
+
+.nobody-intro {
+  max-width: 610px;
+  margin: 36px 0 0;
+  color: var(--nobody-muted);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(18px, 1.45vw, 23px);
+  line-height: 1.65;
+}
+
+.nobody-actions {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.nobody-primary {
+  min-height: 54px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 34px;
+  border-radius: 999px;
+  background: var(--nobody-ink);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.nobody-primary:hover {
+  transform: translateY(-2px);
+  background: #171715;
+}
+
+.nobody-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--nobody-muted);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nobody-fine-print {
+  margin: 24px 0 0;
+  color: var(--nobody-faint);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.nobody-hero-scene {
+  position: relative;
+  min-height: 610px;
+  display: grid;
+  place-items: center;
+}
+
+.nobody-halo {
+  position: absolute;
+  inset: 6% 2%;
+  border: 1px solid rgba(53, 53, 50, 0.08);
+  border-radius: 50%;
+}
+
+.nobody-halo::before,
+.nobody-halo::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(53, 53, 50, 0.07);
+  border-radius: 50%;
+}
+
+.nobody-halo::before {
+  inset: 11%;
+}
+
+.nobody-halo::after {
+  inset: 27%;
+}
+
+.nobody-character {
+  position: absolute;
+  z-index: 2;
+  top: 4%;
+  right: 9%;
+  width: 178px;
+  height: 145px;
+  border-radius: 53% 47% 46% 54% / 59% 55% 45% 41%;
+  background: #333330;
+  box-shadow: 0 28px 46px rgba(53, 53, 50, 0.2);
+  transform: rotate(4deg);
+}
+
+.nobody-eye {
+  position: absolute;
+  top: 48px;
+  width: 23px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f5f3ec;
+}
+
+.nobody-eye::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  width: 5px;
+  height: 8px;
+  border-radius: 50%;
+  background: #242421;
+}
+
+.nobody-eye-left {
+  left: 49px;
+  transform: rotate(-6deg);
+}
+
+.nobody-eye-right {
+  right: 43px;
+  transform: rotate(4deg);
+}
+
+.nobody-smile {
+  position: absolute;
+  left: 83px;
+  top: 90px;
+  width: 16px;
+  height: 8px;
+  border-bottom: 2px solid #f5f3ec;
+  border-radius: 0 0 50% 50%;
+}
+
+.nobody-post-preview {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  margin-right: 10%;
+  padding: clamp(28px, 4vw, 52px);
+  border: 1px solid rgba(53, 53, 50, 0.12);
+  border-radius: 34px 46px 38px 44px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 34px 80px rgba(53, 53, 50, 0.12);
+  transform: rotate(-1.8deg);
+}
+
+.nobody-post-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nobody-mini-avatar {
+  width: 38px;
+  height: 34px;
+  border-radius: 52% 48% 45% 55%;
+  background: #333330;
+}
+
+.nobody-post-author div {
+  display: grid;
+  gap: 3px;
+}
+
+.nobody-post-author strong {
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.nobody-post-author div span {
+  color: var(--nobody-faint);
+  font-size: 8px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.nobody-post-preview > p {
+  max-width: 440px;
+  margin: 38px 0 60px;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(28px, 3.4vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.nobody-post-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--nobody-muted);
+}
+
+.nobody-post-status span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+}
+
+.nobody-post-status span i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--nobody-ink);
+}
+
+.nobody-post-status small {
+  color: var(--nobody-faint);
+  font-size: 8px;
+}
+
+.nobody-scene-note {
+  position: absolute;
+  left: 4%;
+  bottom: 8%;
+  margin: 0;
+  color: var(--nobody-faint);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.nobody-origin {
+  min-height: 92vh;
+  padding-block: 150px;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  gap: 70px;
+  align-items: center;
+  border-top: 1px solid var(--nobody-line);
+}
+
+.nobody-origin-copy {
+  max-width: 1080px;
+}
+
+.nobody-origin h2 {
+  max-width: 1060px;
+  margin: 0;
+  font-size: clamp(54px, 6.3vw, 98px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.nobody-origin h2 span,
+.nobody-choices h2 span,
+.nobody-final h2 span {
+  display: block;
+  color: var(--nobody-muted);
+}
+
+.nobody-origin-answer {
+  max-width: 790px;
+  margin: 64px 0 0 auto;
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 50px;
+  padding-top: 34px;
+  border-top: 1px solid var(--nobody-line);
+}
+
+.nobody-origin-answer blockquote {
+  margin: 0;
+  color: var(--nobody-signal);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.nobody-origin-answer p {
+  margin: 0;
+  color: var(--nobody-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.nobody-system {
+  padding-block: 145px;
+  border-top: 1px solid var(--nobody-line);
+}
+
+.nobody-system-heading {
+  max-width: 980px;
+}
+
+.nobody-system h2 {
+  margin: 24px 0 0;
+  font-size: clamp(48px, 5.6vw, 84px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.nobody-principles {
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--nobody-line);
+  border-bottom: 1px solid var(--nobody-line);
+}
+
+.nobody-principles article {
+  min-height: 470px;
+  padding: 34px 38px 42px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nobody-principles article + article {
+  padding-left: 38px;
+  border-left: 1px solid var(--nobody-line);
+}
+
+.nobody-principles article > span {
+  color: var(--nobody-signal);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.nobody-principle-mark {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  color: var(--nobody-ink);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 48px;
+}
+
+.nobody-drift-mark {
+  gap: 15px;
+}
+
+.nobody-drift-mark i {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--nobody-ink);
+  opacity: 0.24;
+}
+
+.nobody-drift-mark i:nth-child(2) {
+  opacity: 0.52;
+}
+
+.nobody-drift-mark i:nth-child(3) {
+  opacity: 1;
+}
+
+.nobody-principles h3 {
+  margin: auto 0 0;
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.nobody-principles p {
+  margin: 18px 0 0;
+  color: var(--nobody-muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.nobody-choices {
+  min-height: 76vh;
+  padding-block: 140px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 110px;
+  border-bottom: 1px solid var(--nobody-line);
+}
+
+.nobody-choices h2 {
+  margin: 26px 0 0;
+  font-size: clamp(58px, 6.4vw, 96px);
+  line-height: 0.91;
+  letter-spacing: -0.055em;
+}
+
+.nobody-choices > p {
+  max-width: 570px;
+  margin: 0;
+  color: var(--nobody-muted);
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(19px, 1.6vw, 25px);
+  line-height: 1.65;
+}
+
+.nobody-final {
+  min-height: 88vh;
+  padding-block: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nobody-final-face {
+  position: relative;
+  width: 116px;
+  height: 94px;
+  margin-bottom: 42px;
+  border-radius: 52% 48% 46% 54%;
+  background: var(--nobody-ink);
+  transform: rotate(2deg);
+}
+
+.nobody-final-face i {
+  position: absolute;
+  top: 29px;
+  width: 16px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--nobody-paper);
+}
+
+.nobody-final-face i:first-child {
+  left: 32px;
+}
+
+.nobody-final-face i:nth-child(2) {
+  right: 31px;
+}
+
+.nobody-final-face span {
+  position: absolute;
+  left: 52px;
+  top: 59px;
+  width: 12px;
+  height: 6px;
+  border-bottom: 1.5px solid var(--nobody-paper);
+  border-radius: 0 0 50% 50%;
+}
+
+.nobody-final h2 {
+  max-width: 980px;
+  margin: 26px 0 42px;
+  font-size: clamp(52px, 6vw, 92px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.nobody-return {
+  margin-top: 26px;
+  color: var(--nobody-muted);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nobody-footer {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--nobody-line);
+  color: var(--nobody-faint);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.nobody-footer a {
+  color: var(--nobody-muted);
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .nobody-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .nobody-hero-scene {
+    min-height: 590px;
+  }
+
+  .nobody-origin {
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 35px;
+  }
+
+  .nobody-choices {
+    gap: 65px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nobody-header,
+  .nobody-hero,
+  .nobody-origin,
+  .nobody-system,
+  .nobody-choices,
+  .nobody-final,
+  .nobody-footer {
+    width: min(100% - 34px, 1460px);
+  }
+
+  .nobody-header {
+    min-height: 72px;
+  }
+
+  .nobody-header > span {
+    display: none;
+  }
+
+  .nobody-hero {
+    min-height: auto;
+    padding-block: 70px 90px;
+    gap: 46px;
+  }
+
+  .nobody-hero h1 {
+    font-size: clamp(56px, 17vw, 82px);
+  }
+
+  .nobody-intro {
+    font-size: 18px;
+  }
+
+  .nobody-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nobody-primary {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nobody-hero-scene {
+    min-height: 480px;
+  }
+
+  .nobody-character {
+    top: 2%;
+    right: 0;
+    width: 126px;
+    height: 103px;
+  }
+
+  .nobody-eye {
+    top: 34px;
+    width: 17px;
+    height: 25px;
+  }
+
+  .nobody-eye::after {
+    left: 7px;
+    top: 9px;
+    width: 4px;
+    height: 6px;
+  }
+
+  .nobody-eye-left {
+    left: 35px;
+  }
+
+  .nobody-eye-right {
+    right: 31px;
+  }
+
+  .nobody-smile {
+    left: 59px;
+    top: 65px;
+    width: 12px;
+    height: 6px;
+  }
+
+  .nobody-post-preview {
+    margin-right: 4%;
+    padding: 26px 24px;
+    border-radius: 26px 34px 28px 32px;
+  }
+
+  .nobody-post-preview > p {
+    margin: 34px 0 52px;
+    font-size: 31px;
+  }
+
+  .nobody-post-status {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nobody-scene-note {
+    display: none;
+  }
+
+  .nobody-origin,
+  .nobody-system,
+  .nobody-choices,
+  .nobody-final {
+    min-height: auto;
+    padding-block: 100px;
+  }
+
+  .nobody-origin h2,
+  .nobody-system h2,
+  .nobody-choices h2,
+  .nobody-final h2 {
+    font-size: clamp(48px, 14vw, 68px);
+  }
+
+  .nobody-origin-answer {
+    margin-top: 46px;
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .nobody-principles {
+    margin-top: 56px;
+    grid-template-columns: 1fr;
+  }
+
+  .nobody-principles article {
+    min-height: 390px;
+    padding: 28px 0 36px;
+  }
+
+  .nobody-principles article + article {
+    padding-left: 0;
+    border-top: 1px solid var(--nobody-line);
+    border-left: 0;
+  }
+
+  .nobody-principle-mark {
+    height: 120px;
+  }
+
+  .nobody-choices {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .nobody-footer {
+    padding-block: 30px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nobody-story *,
+  .nobody-story *::before,
+  .nobody-story *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

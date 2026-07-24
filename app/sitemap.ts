@@ -16,5 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      url: "https://echoscarrie.com/nobody/",
+      lastModified: new Date("2026-07-24T00:00:00+08:00"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 }

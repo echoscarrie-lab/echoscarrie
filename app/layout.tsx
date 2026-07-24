@@ -108,6 +108,17 @@ const structuredData = {
             position: 6,
             item: {
               "@type": "WebApplication",
+              name: "Nobody",
+              url: "https://nobodies.online/",
+              image: "https://echoscarrie.com/nobody-og.png",
+              applicationCategory: "SocialNetworkingApplication",
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 7,
+            item: {
+              "@type": "WebApplication",
               name: "DEGRADED",
               url: "https://degraded.echoscarrie.com/",
               applicationCategory: "LifestyleApplication",
@@ -115,7 +126,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 7,
+            position: 8,
             item: {
               "@type": "WebApplication",
               name: "Cyber Tomb for Your Social Battery",
