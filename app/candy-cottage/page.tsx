@@ -45,7 +45,7 @@ const structuredData = {
   image: "https://echoscarrie.com/candy-cottage-icon.png",
   screenshot: [
     "https://echoscarrie.com/candy-cottage-room.jpg",
-    "https://echoscarrie.com/candy-cottage-phone.jpg",
+    "https://echoscarrie.com/candy-cottage-preview.png",
   ],
   description:
     "A tiny iPhone and iPad ritual for writing down a bad thought, choosing how to destroy it, and letting it go.",
@@ -188,14 +188,15 @@ export default function CandyCottagePage() {
         </section>
 
         <section className="candy-in-hand" aria-labelledby="candy-in-hand-title">
-          <div className="candy-phone-stage">
-            <div className="candy-phone-glow" aria-hidden="true" />
+          <div className="candy-preview-stage">
+            <div className="candy-preview-glow" aria-hidden="true" />
+            <span className="candy-preview-label">ENGLISH APP PREVIEW</span>
             <Image
-              src="/candy-cottage-phone.jpg"
-              alt="Candy Cottage running on an iPhone in Chinese"
-              width={736}
-              height={1600}
-              sizes="(max-width: 760px) 78vw, 360px"
+              src="/candy-cottage-preview.png"
+              alt="Candy Cottage's English interface with six playful ways to let go of a thought"
+              width={1448}
+              height={1086}
+              sizes="(max-width: 760px) calc(100vw - 36px), 660px"
             />
           </div>
           <div className="candy-in-hand-copy">
