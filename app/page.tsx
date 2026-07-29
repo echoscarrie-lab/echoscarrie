@@ -39,6 +39,7 @@ const CANDY_COTTAGE_URL = "/candy-cottage/";
 const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
 const BETWEEN_URL = "https://between-us-pilot.echoscarrie.chatgpt.site/";
 const DEGRADED_URL = "https://degraded.echoscarrie.com/";
+const BLACKHOLE_URL = "https://blackhole.echoscarrie.com/";
 const CYBER_TOMB_URL = "https://cyber-tomb-social-battery.echoscarrie.chatgpt.site/";
 const NOBODY_STORY_URL = "/nobody/";
 
@@ -973,6 +974,43 @@ export default function Home() {
                     )}
                     {frequency.id === "field-notes" && (
                       <>
+                        <article className="featured-work featured-blackhole" aria-labelledby="blackhole-title">
+                          <a
+                            className="blackhole-preview"
+                            href={BLACKHOLE_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Open Nothing Comes Back"
+                          >
+                            <Image
+                              src="/nothing-comes-back.png"
+                              alt="A luminous accretion disk bending around a black hole"
+                              width={1200}
+                              height={630}
+                              sizes="(max-width: 760px) 90vw, 720px"
+                            />
+                            <span className="blackhole-live"><i aria-hidden="true" /> LIVE IN YOUR BROWSER</span>
+                          </a>
+                          <div className="work-copy">
+                            <span className="work-kicker">INTERACTIVE WEB RITUAL</span>
+                            <h3 id="blackhole-title">Nothing Comes Back</h3>
+                            <p className="work-description">
+                              A black hole you can throw things into. Type something
+                              you want gone and watch it redshift, slow down, and
+                              disappear. No account, no history, no undo.
+                            </p>
+                            <div className="book-meta" aria-label="Nothing Comes Back details">
+                              <span>Real-time WebGL</span>
+                              <span>Nothing is saved</span>
+                              <span>Global swallow count</span>
+                            </div>
+                            <a className="work-link" href={BLACKHOLE_URL} target="_blank" rel="noreferrer">
+                              Throw something in
+                              <span aria-hidden="true">↗</span>
+                            </a>
+                          </div>
+                        </article>
+
                         <article className="featured-work featured-nobody" aria-labelledby="nobody-title">
                           <a
                             className="nobody-preview"
@@ -1119,6 +1157,7 @@ export default function Home() {
         <a className="footer-brand" href="#top">ECHO / CARRIE</a>
         <span>A listening surface by Carrie · 2026</span>
         <div>
+          <a href={BLACKHOLE_URL} target="_blank" rel="noreferrer">Black Hole</a>
           <a href={NOBODY_STORY_URL}>Nobody</a>
           <a href={DEGRADED_URL} target="_blank" rel="noreferrer">DEGRADED</a>
           <a href="https://github.com/echoscarrie-lab/echoscarrie" target="_blank" rel="noreferrer">GitHub</a>
