@@ -553,6 +553,7 @@ export default function Home() {
           <a href="#listen">Listen</a>
           <a href="#rooms">Rooms</a>
           <a href="#about">Carrie</a>
+          <a href="#contact">Contact</a>
         </nav>
         <div className="signal-status" aria-label="The echo is listening">
           <span className="status-dot" aria-hidden="true" />
@@ -1153,6 +1154,35 @@ export default function Home() {
         <div className="soft-orbit" aria-hidden="true"><span /></div>
       </section>
 
+      <section className="contact" id="contact" aria-labelledby="contact-title">
+        <div className="contact-index">CONTACT</div>
+        <div className="contact-copy">
+          <p className="eyebrow">A direct line to Echo Carrie.</p>
+          <h2 id="contact-title">How to contact us.</h2>
+          <p className="contact-intro">
+            For collaborations, press, product feedback, or a strange little
+            idea, send a note. We read every real message.
+          </p>
+          <div className="contact-links" aria-label="Contact links">
+            <a href="mailto:echoscarrie@outlook.com">
+              <span>Email</span>
+              <strong>echoscarrie@outlook.com</strong>
+              <i aria-hidden="true">↗</i>
+            </a>
+            <a href="https://x.com/echoscarrie" target="_blank" rel="noreferrer">
+              <span>Follow</span>
+              <strong>X / @echoscarrie</strong>
+              <i aria-hidden="true">↗</i>
+            </a>
+            <a href="https://github.com/echoscarrie-lab" target="_blank" rel="noreferrer">
+              <span>Builds</span>
+              <strong>GitHub / echoscarrie-lab</strong>
+              <i aria-hidden="true">↗</i>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <footer>
         <a className="footer-brand" href="#top">ECHO / CARRIE</a>
         <span>A listening surface by Carrie · 2026</span>
@@ -1161,6 +1191,7 @@ export default function Home() {
           <a href={NOBODY_STORY_URL}>Nobody</a>
           <a href={DEGRADED_URL} target="_blank" rel="noreferrer">DEGRADED</a>
           <a href="https://github.com/echoscarrie-lab/echoscarrie" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#contact">Contact</a>
           <a href="#listen">Leave another signal ↑</a>
         </div>
       </footer>

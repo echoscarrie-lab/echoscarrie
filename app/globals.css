@@ -103,6 +103,7 @@ summary:focus-visible,
 .hero,
 .rooms,
 .why,
+.contact,
 footer {
   position: relative;
   z-index: 1;
@@ -1863,6 +1864,87 @@ h1 em {
   font-style: italic;
 }
 
+.contact {
+  min-height: 70vh;
+  padding-block: clamp(110px, 12vw, 180px);
+  display: grid;
+  grid-template-columns: 0.34fr 1fr;
+  align-content: center;
+  gap: 60px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-index {
+  padding-top: 14px;
+  color: var(--signal);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.contact-copy {
+  max-width: 1000px;
+}
+
+.contact-copy h2 {
+  max-width: 900px;
+  margin: 0;
+  font-family: "Iowan Old Style", Baskerville, "Baskerville Old Face", Georgia, serif;
+  font-size: clamp(48px, 5.8vw, 88px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.contact-intro {
+  max-width: 650px;
+  margin: 30px 0 0;
+  color: var(--paper-muted);
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.7;
+}
+
+.contact-links {
+  margin-top: 54px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-links a {
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 105px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  color: var(--paper);
+  text-decoration: none;
+  transition: padding 220ms ease, background 220ms ease;
+}
+
+.contact-links a:hover {
+  padding-inline: 16px;
+  background: rgba(var(--signal-rgb), 0.055);
+}
+
+.contact-links span {
+  color: var(--paper-faint);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-links strong {
+  font-family: "Iowan Old Style", Baskerville, Georgia, serif;
+  font-size: clamp(18px, 1.8vw, 26px);
+  font-weight: 400;
+}
+
+.contact-links i {
+  color: var(--signal);
+  font-style: normal;
+}
+
 .soft-orbit {
   position: absolute;
   right: -15vw;
@@ -2048,6 +2130,7 @@ footer a:hover {
   .hero,
   .rooms,
   .why,
+  .contact,
   footer {
     width: min(100% - 34px, 1480px);
   }
@@ -2262,6 +2345,27 @@ footer a:hover {
     padding-block: 110px;
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .contact {
+    min-height: auto;
+    padding-block: 100px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-links {
+    margin-top: 40px;
+  }
+
+  .contact-links a {
+    min-height: 74px;
+    grid-template-columns: 70px 1fr auto;
+    gap: 14px;
+  }
+
+  .contact-links strong {
+    overflow-wrap: anywhere;
   }
 
   .soft-orbit {
