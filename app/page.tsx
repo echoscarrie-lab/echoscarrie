@@ -1169,16 +1169,6 @@ export default function Home() {
               <strong>echoscarrie@outlook.com</strong>
               <i aria-hidden="true">↗</i>
             </a>
-            <a href="https://x.com/echoscarrie" target="_blank" rel="noreferrer">
-              <span>Follow</span>
-              <strong>X / @echoscarrie</strong>
-              <i aria-hidden="true">↗</i>
-            </a>
-            <a href="https://github.com/echoscarrie-lab" target="_blank" rel="noreferrer">
-              <span>Builds</span>
-              <strong>GitHub / echoscarrie-lab</strong>
-              <i aria-hidden="true">↗</i>
-            </a>
           </div>
         </div>
       </section>
