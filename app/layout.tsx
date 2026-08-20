@@ -67,6 +67,24 @@ const structuredData = {
             position: 3,
             item: {
               "@type": "SoftwareApplication",
+              name: "MaoMao AR: 3D Cat Pet",
+              url: "https://echoscarrie.com/maomao-ar/",
+              downloadUrl: "https://apps.apple.com/app/id6800217406",
+              image: "https://echoscarrie.com/maomao-ar/og.png",
+              applicationCategory: "EntertainmentApplication",
+              operatingSystem: "iOS 17 or later",
+              offers: {
+                "@type": "Offer",
+                price: 0,
+                priceCurrency: "USD",
+              },
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            item: {
+              "@type": "SoftwareApplication",
               name: "Candy Cottage",
               url: "https://echoscarrie.com/candy-cottage/",
               downloadUrl: "https://apps.apple.com/app/id6788266073",
@@ -82,7 +100,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 4,
+            position: 5,
             item: {
               "@type": "WebApplication",
               name: "Whispering You to Sleep",
@@ -94,7 +112,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 5,
+            position: 6,
             item: {
               "@type": "WebApplication",
               name: "Between Us",
@@ -105,7 +123,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 6,
+            position: 7,
             item: {
               "@type": "WebApplication",
               name: "Nobody",
@@ -116,7 +134,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 7,
+            position: 8,
             item: {
               "@type": "WebApplication",
               name: "DEGRADED",
@@ -126,7 +144,7 @@ const structuredData = {
           },
           {
             "@type": "ListItem",
-            position: 8,
+            position: 9,
             item: {
               "@type": "WebApplication",
               name: "Cyber Tomb for Your Social Battery",

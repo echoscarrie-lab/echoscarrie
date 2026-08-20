@@ -980,6 +980,33 @@ h1 em {
   content: "02";
 }
 
+.featured-maomao-ar {
+  border-color: rgba(184, 255, 71, 0.3);
+  background:
+    radial-gradient(circle at 18% 30%, rgba(184, 255, 71, 0.12), transparent 34%),
+    radial-gradient(circle at 76% 70%, rgba(116, 174, 88, 0.08), transparent 35%),
+    linear-gradient(145deg, rgba(22, 27, 18, 0.99), rgba(12, 14, 11, 0.995));
+}
+
+.featured-maomao-ar::after {
+  content: "AR";
+  color: rgba(184, 255, 71, 0.055);
+}
+
+.featured-maomao-ar .work-kicker {
+  color: #b8ff47;
+}
+
+.featured-maomao-ar .work-link {
+  background: #b8ff47;
+  color: #13170f;
+}
+
+.featured-maomao-ar .world-live i {
+  background: #b8ff47;
+  box-shadow: 0 0 0 4px rgba(184, 255, 71, 0.14);
+}
+
 .featured-candy {
   border-color: rgba(255, 177, 195, 0.3);
   background:

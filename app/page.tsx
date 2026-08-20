@@ -34,6 +34,8 @@ const VISIT_KEY = "echo-carrie-visits-v2";
 const BOOK_URL = "https://www.amazon.com/dp/B0H6K9Z976";
 const MAOMAO_URL = "https://maomao.echoscarrie.com/";
 const MAOMAO_APP_URL = "https://apps.apple.com/us/app/maomao-desktop-pet/id6784916029?mt=12";
+const MAOMAO_AR_URL = "/maomao-ar/";
+const MAOMAO_AR_APP_URL = "https://apps.apple.com/app/id6800217406";
 const CANDY_COTTAGE_APP_URL = "https://apps.apple.com/app/id6788266073";
 const CANDY_COTTAGE_URL = "/candy-cottage/";
 const HUSH_URL = "https://hush-whisper-dreams.lovable.app/";
@@ -854,6 +856,46 @@ export default function Home() {
                           </div>
                         </article>
 
+                        <article className="featured-work featured-world featured-maomao-ar" aria-labelledby="maomao-ar-title">
+                          <a
+                            className="world-preview"
+                            href={MAOMAO_AR_URL}
+                            aria-label="Discover MaoMao AR"
+                          >
+                            <Image
+                              src="/maomao-ar/media/on-grass.jpg"
+                              alt="MaoMao, a tiny 3D cat, standing outdoors in augmented reality"
+                              width={1280}
+                              height={720}
+                              sizes="(max-width: 760px) 90vw, 720px"
+                            />
+                            <span className="world-live"><i aria-hidden="true" /> NOW ON IOS</span>
+                          </a>
+                          <div className="work-copy">
+                            <span className="work-kicker">3D AUGMENTED REALITY CAT</span>
+                            <h3 id="maomao-ar-title">MaoMao AR</h3>
+                            <p className="work-description">
+                              Place a tiny 3D cat on your floor or desk, call him
+                              over, give him a pet, and capture the moment in AR.
+                            </p>
+                            <div className="book-meta" aria-label="MaoMao AR details">
+                              <span>iPhone</span>
+                              <span>Free</span>
+                              <span>No account</span>
+                            </div>
+                            <div className="work-actions">
+                              <a className="work-link" href={MAOMAO_AR_URL}>
+                                Meet MaoMao
+                                <span aria-hidden="true">→</span>
+                              </a>
+                              <a className="work-link is-secondary" href={MAOMAO_AR_APP_URL} target="_blank" rel="noreferrer">
+                                App Store
+                                <span aria-hidden="true">↗</span>
+                              </a>
+                            </div>
+                          </div>
+                        </article>
+
                         <article className="featured-work featured-candy" aria-labelledby="candy-cottage-title">
                           <a
                             className="candy-preview"
@@ -1177,6 +1219,7 @@ export default function Home() {
         <a className="footer-brand" href="#top">ECHO / CARRIE</a>
         <span>A listening surface by Carrie · 2026</span>
         <div>
+          <a href={MAOMAO_AR_URL}>MaoMao AR</a>
           <a href={BLACKHOLE_URL} target="_blank" rel="noreferrer">Black Hole</a>
           <a href={NOBODY_STORY_URL}>Nobody</a>
           <a href={DEGRADED_URL} target="_blank" rel="noreferrer">DEGRADED</a>
