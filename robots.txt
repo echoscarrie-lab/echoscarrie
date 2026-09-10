@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://echoscarrie.com
+Sitemap: https://echoscarrie.com/sitemap.xml
