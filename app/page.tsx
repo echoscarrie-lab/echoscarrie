@@ -44,6 +44,8 @@ const DEGRADED_URL = "https://degraded.echoscarrie.com/";
 const BLACKHOLE_URL = "https://blackhole.echoscarrie.com/";
 const CYBER_TOMB_URL = "https://cyber-tomb-social-battery.echoscarrie.chatgpt.site/";
 const NOBODY_STORY_URL = "/nobody/";
+const X_URL = "https://x.com/echoscarrie";
+const SUPPORT_URL = "https://buymeacoffee.com/echoscarrie";
 
 const frequencies: Frequency[] = [
   {
@@ -359,7 +361,7 @@ export default function Home() {
   const [history, setHistory] = useState<Echo[]>([]);
   const [visits, setVisits] = useState(1);
   const [memoryReady, setMemoryReady] = useState(false);
-  const [openRoom, setOpenRoom] = useState<FrequencyId | null>("human-ai");
+  const [openRoom, setOpenRoom] = useState<FrequencyId | null>("tiny-worlds");
   const [copyStatus, setCopyStatus] = useState("");
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
@@ -568,6 +570,19 @@ export default function Home() {
 
         <div className="hero-copy">
           <p className="eyebrow">This website listens before it speaks.</p>
+          <div className="hero-maomao">
+            <Image
+              src="/maomao-ar/media/app-icon.jpg"
+              alt="MaoMao, Carrie's tiny tabby cat"
+              width={64}
+              height={64}
+              priority
+            />
+            <a className="work-link is-secondary" href={MAOMAO_AR_URL}>
+              Meet MaoMao
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
           <h1>
             Say something real.
             <em>This place answers.</em>
@@ -1192,6 +1207,10 @@ export default function Home() {
             the questions, stories, and experiments she keeps returning to.
           </p>
           <p className="why-signoff">I got tired of websites that only talk at you. So I made one that waits.</p>
+          <a className="work-link is-secondary" href={X_URL} target="_blank" rel="noreferrer">
+            Find Carrie on X
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
         <div className="soft-orbit" aria-hidden="true"><span /></div>
       </section>
@@ -1224,6 +1243,8 @@ export default function Home() {
           <a href={NOBODY_STORY_URL}>Nobody</a>
           <a href={DEGRADED_URL} target="_blank" rel="noreferrer">DEGRADED</a>
           <a href="https://github.com/echoscarrie-lab/echoscarrie" target="_blank" rel="noreferrer">GitHub</a>
+          <a href={X_URL} target="_blank" rel="noreferrer">X</a>
+          <a href={SUPPORT_URL} target="_blank" rel="noreferrer">Buy me a coffee</a>
           <a href="#contact">Contact</a>
           <a href="#listen">Leave another signal ↑</a>
         </div>
